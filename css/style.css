@@ -1,0 +1,104 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 400;
+    line-height: 1.6;
+    color: #eee;
+    background-color: #222;
+}
+
+.todo {
+    position: relative;
+    font-size: 200%;
+    margin: 5% auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 70rem;
+}
+
+.todo h1 {
+    font-size: 300%;
+    margin-bottom: 2rem;
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
+
+.btn {
+    cursor: pointer;
+    border: 3px solid #eee;
+    padding: 1rem 1.5rem;
+    background-color: transparent;
+    color: inherit;
+    margin: .5rem;
+    border-radius: 3rem;
+    outline: none;
+}
+
+.btn:hover, .btn:active {
+    transform: scale(1.1) translateY(-5px);
+    transition: all .3s;
+}
+
+.todo__clear, .todo__add, .todo__delete {
+    margin-left: 2rem;
+}
+
+.todo__input__tab {
+    margin: 2rem 0;
+    position: relative;
+}
+
+.todo__input {
+    outline: none;
+    padding: 1rem;
+    border: 3px solid #eee;
+    background-color: #222;
+    color: inherit;
+    width: 40rem;
+    border-radius: 3rem;
+}
+
+.todo__tasks__row { display: flex; position: relative; }
+
+.todo__tasks__row--item { margin: 0 3rem; }
+
+.del { margin: 0 1rem; }
+.pen { color: goldenrod;}
+.done { color: greenyellow; }
+
+.pen, .del, .done {
+    cursor: pointer;
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+.hiddenOp {
+    opacity: 0;
+}
+
+.edit_message {
+    cursor: default;
+    transition: opacity .3s;
+    position: absolute;
+    left: -6rem;
+    top: -12rem;
+    border-radius: 1rem;
+    width: 15rem;
+    height: 10rem;
+    background-color: #eee;
+    color: #222;
+}
